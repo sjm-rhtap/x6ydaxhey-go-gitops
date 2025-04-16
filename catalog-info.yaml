@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: x6ydaxhey-go-gitops
+  description: This is GitOps manifest for x6ydaxhey-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=x6ydaxhey-go
+    backstage.io/kubernetes-id: x6ydaxhey-go 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: sjm-rhtap/x6ydaxhey-go-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:x6ydaxhey-go
